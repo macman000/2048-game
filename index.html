@@ -267,6 +267,7 @@ function newGame(){
   document.getElementById('overlay').classList.remove('show');
   document.getElementById('msg-bar').textContent='';
   spawnTile(); spawnTile();
+  window.cells = cells;
   fullRedraw();
   updateScore();
 }
@@ -387,6 +388,7 @@ function move(dir){
   if(!moved && removes.length===0) return;
 
   cells=newCells;
+  window.cells = cells; // expose for bot
   animating=true;
 
   // Slide all tiles to new positions (CSS transition fires)
