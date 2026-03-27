@@ -148,7 +148,7 @@
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    transition: top 80ms ease, left 80ms ease;
+    transition: top 30ms ease, left 30ms ease;
     will-change: top, left;
   }
 
@@ -249,7 +249,7 @@ const TILE_COLORS = {
 function tileColor(v){ return TILE_COLORS[v]||['#3c3a32','#f9f6f2']; }
 function fontSize(v){ return v<100?'clamp(1.3rem,5vw,1.8rem)':v<1000?'clamp(1rem,4vw,1.4rem)':'clamp(.75rem,3vw,1rem)'; }
 
-const ANIM_MS = 80;
+const ANIM_MS = 30;
 let cells, score, best=0, over, won, nextId=1, animating=false;
 const domTiles={};
 
